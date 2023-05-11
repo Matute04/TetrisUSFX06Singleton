@@ -18,7 +18,7 @@
 ABoard::ABoard()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;           // propiedad de la clase AActor que indica si este actor debe llamar a la función Tick en cada cuadro del juego
+	PrimaryActorTick.bCanEverTick = true;           // propiedad de la clase AActor que indica si este actor debe llamar a la funciÃ³n Tick en cada cuadro del juego
 
     TArray<AActor*> Instancia;
     UGameplayStatics::GetAllActorsOfClass(GetWorld(), ABoard::StaticClass(), Instancia);
@@ -31,9 +31,9 @@ ABoard::ABoard()
 }
 
 // Called when the game starts or when spawned
-void ABoard::BeginPlay()                            // Función que se ejecuta cuando el juego comienza o cuando se crea el actor
+void ABoard::BeginPlay()                            // FunciÃ³n que se ejecuta cuando el juego comienza o cuando se crea el actor
 {
-	Super::BeginPlay();							    // Llamar a la función BeginPlay de la clase padre
+	Super::BeginPlay();							    // Llamar a la funciÃ³n BeginPlay de la clase padre
 	
     for (TActorIterator<APiece> it(GetWorld()); it; ++it)
     {
@@ -46,31 +46,31 @@ void ABoard::BeginPlay()                            // Función que se ejecuta cu
 }
 
 // Called every frame
-void ABoard::Tick(float DeltaTime)				  // Función que se ejecuta cada fotograma
+void ABoard::Tick(float DeltaTime)				  // FunciÃ³n que se ejecuta cada fotograma
 {
-	Super::Tick(DeltaTime);						  // Llamar a la función Tick de la clase padre
+	Super::Tick(DeltaTime);						  // Llamar a la funciÃ³n Tick de la clase padre
 
     if (bGameOver)                                // Si el juego ha terminado
     {
-		return;                                   // Salir de la función
+		return;                                   // Salir de la funciÃ³n
 	}
 
-    switch (Status)   						      // Según el estado del juego
+    switch (Status)   						      // SegÃºn el estado del juego
     {
     case PS_NOT_INITED:  					      // Si el juego no ha sido inicializado
         NewPiece();							      // Crear una nueva pieza
         CoolLeft = CoolDown; 				 	  // Establecer el tiempo de espera para la siguiente pieza
         Status = PS_MOVING; 					  // Establecer el estado del juego a "Moviendo"
         break;
-    case PS_MOVING:							      // Si el juego está en movimiento
-        CoolLeft -= DeltaTime;					  // Restar el tiempo transcurrido desde el último fotograma
+    case PS_MOVING:							      // Si el juego estÃ¡ en movimiento
+        CoolLeft -= DeltaTime;					  // Restar el tiempo transcurrido desde el Ãºltimo fotograma
         if (CoolLeft <= 0.0f)                     // Si el tiempo de espera ha terminado
         {
             MoveDown(); 						  // Mover la pieza hacia abajo
         }
         break;
     case PS_GOT_BOTTOM:						      // Si la pieza ha llegado al fondo
-        CoolLeft -= DeltaTime;					  // Restar el tiempo transcurrido desde el último fotograma
+        CoolLeft -= DeltaTime;					  // Restar el tiempo transcurrido desde el Ãºltimo fotograma
         if (CoolLeft <= 0.0f)                     // Si el tiempo de espera ha terminado
         {
             if (CurrentPiece)  				      // Si la pieza actual existe
@@ -90,14 +90,14 @@ void ABoard::Tick(float DeltaTime)				  // Función que se ejecuta cada fotograma
 }
 
 // Called to bind functionality to input
-void ABoard::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)                        // Función que se ejecuta cuando se crea el actor
+void ABoard::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)                        // FunciÃ³n que se ejecuta cuando se crea el actor
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);                                         // Llamar a la función SetupPlayerInputComponent de la clase padre
-    PlayerInputComponent->BindAction("Rotate", IE_Pressed, this, &ABoard::Rotate); 	                // Asignar la función Rotate al evento "Rotate" del componente PlayerInputComponent 
-    PlayerInputComponent->BindAction("MoveLeft", IE_Pressed, this, &ABoard::MoveLeft);              // Asignar la función MoveLeft al evento "MoveLeft" del componente PlayerInputComponent
-    PlayerInputComponent->BindAction("MoveRight", IE_Pressed, this, &ABoard::MoveRight); 		    // Asignar la función MoveRight al evento "MoveRight" del componente PlayerInputComponent 
-    PlayerInputComponent->BindAction("MoveDownToEnd", IE_Pressed, this, &ABoard::MoveDownToEnd);    // Asignar la función MoveDownToEnd al evento "MoveDownToEnd" del componente PlayerInputComponent
-    PlayerInputComponent->BindAction("NewPiece", IE_Pressed, this, &ABoard::NewPiece); 			    // Asignar la función NewPiece al evento "NewPiece" del componente PlayerInputComponent
+	Super::SetupPlayerInputComponent(PlayerInputComponent);                                         // Llamar a la funciÃ³n SetupPlayerInputComponent de la clase padre
+    PlayerInputComponent->BindAction("Rotate", IE_Pressed, this, &ABoard::Rotate); 	                // Asignar la funciÃ³n Rotate al evento "Rotate" del componente PlayerInputComponent 
+    PlayerInputComponent->BindAction("MoveLeft", IE_Pressed, this, &ABoard::MoveLeft);              // Asignar la funciÃ³n MoveLeft al evento "MoveLeft" del componente PlayerInputComponent
+    PlayerInputComponent->BindAction("MoveRight", IE_Pressed, this, &ABoard::MoveRight); 		    // Asignar la funciÃ³n MoveRight al evento "MoveRight" del componente PlayerInputComponent 
+    PlayerInputComponent->BindAction("MoveDownToEnd", IE_Pressed, this, &ABoard::MoveDownToEnd);    // Asignar la funciÃ³n MoveDownToEnd al evento "MoveDownToEnd" del componente PlayerInputComponent
+    PlayerInputComponent->BindAction("NewPiece", IE_Pressed, this, &ABoard::NewPiece); 			    // Asignar la funciÃ³n NewPiece al evento "NewPiece" del componente PlayerInputComponent
     //PlayerInputComponent->BindAction("CheckLine", IE_Pressed, this, &ABoard::CheckLine);
 
 }
@@ -148,15 +148,15 @@ void ABoard::MoveDown()
 
 void ABoard::NewPiece()  // Crear una nueva pieza
 {
-    CheckLine();         // Comprobar si hay alguna línea completa
+    CheckLine();         // Comprobar si hay alguna lÃ­nea completa
     if (CurrentPiece)   // Si la pieza actual existe
     {
         CurrentPiece->Dismiss();  // Desaparecer la pieza actual
         CurrentPiece->Destroy();  // Destruir la pieza actual
     }
 
-    FVector Location(0.0, 5.0, 195.0);  // Establecer la posición de la nueva pieza
-    FRotator Rotation(0.0, 0.0, 0.0);   // Establecer la rotación de la nueva pieza
+    FVector Location(0.0, 5.0, 195.0);  // Establecer la posiciÃ³n de la nueva pieza
+    FRotator Rotation(0.0, 0.0, 0.0);   // Establecer la rotaciÃ³n de la nueva pieza
     PiezaDirector = GetWorld()->SpawnActor<APiezaDirector>(APiezaDirector::StaticClass());
 
     int Random = FMath::RandRange(0, 5);
@@ -193,11 +193,9 @@ void ABoard::NewPiece()  // Crear una nueva pieza
         PiezaDirector->SetConstruirPieza(PiezaMulticolor);
         //GEngine->AddOnScreenDebugMessage(-1, 4, FColor::Yellow, TEXT("Pieza Multicolor"));
     }
-    //DirectorPieza->SetConstructorPiezaBase(ConstructorPiezasHuecas);
     PiezaDirector->ConstruirPieza();
     APieza* Pieza = PiezaDirector->GetPieza();
     CurrentPiece = Pieza;
-    //CurrentPiece = GetWorld()->SpawnActor<APiezaBase>(Location, Rotation);
     CurrentPiece->SetActorRelativeLocation(FVector(Location));
     CurrentPiece->SetActorRelativeRotation(FRotator(Rotation));
     CurrentPiece->SpawnBlocks();
