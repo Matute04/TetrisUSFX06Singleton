@@ -1,0 +1,42 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TetrisUSFX01-5945.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\TetrisUSFX01Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\Block.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\Board.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\Piece.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\Pieza.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaBrillante.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaConstructora.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaDirector.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaDorada.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaEstructura.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaHielo.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaMetalica.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaMetalicaBrillante.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaMulticolor.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaPiedra.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\TetrisUSFX01.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\TetrisUSFX01GameModeBase.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\Block.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\Board.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\Piece.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\Pieza.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaBrillante.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaConstructora.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaDirector.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaDorada.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaEstructura.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaHielo.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaMetalica.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaMulticolor.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\PiezaPiedra.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\TetrisUSFX01.init.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\TetrisUSFX01GameModeBase.gen.cpp.obj"
+"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\Default.rc2.res"
+/OUT:"C:\Users\Legion 5 Pro\Videos\TetrisUSFX06-master\Intermediate\Build\Win64\UE4Editor\Development\TetrisUSFX01\UE4Editor-TetrisUSFX01-5945.lib"
